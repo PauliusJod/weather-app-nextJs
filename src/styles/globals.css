@@ -19,3 +19,118 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: slategrey;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+@keyframes waveGradient {
+  0% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 1),
+      rgba(148, 163, 184, 0.5)
+    );
+  }
+  10% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.95),
+      rgba(148, 163, 184, 0.55)
+    );
+  }
+  20% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.9),
+      rgba(148, 163, 184, 0.6)
+    );
+  }
+  30% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.85),
+      rgba(148, 163, 184, 0.65)
+    );
+  }
+  40% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.8),
+      rgba(148, 163, 184, 0.7)
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.75),
+      rgba(148, 163, 184, 0.75)
+    );
+  }
+  60% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.7),
+      rgba(148, 163, 184, 0.8)
+    );
+  }
+  70% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.65),
+      rgba(148, 163, 184, 0.85)
+    );
+  }
+  80% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.6),
+      rgba(148, 163, 184, 0.9)
+    );
+  }
+  90% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.55),
+      rgba(148, 163, 184, 0.95)
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      to right,
+      rgba(226, 232, 240, 0.5),
+      rgba(148, 163, 184, 1)
+    );
+  }
+}
+
+.animate-wave-active {
+  background-size: 100% 100%;
+  animation: waveGradient 2s infinite alternate ease-in-out;
+}
+
+.wobble {
+  animation: wobble 4s ease infinite;
+}
+@keyframes wobble {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(20%) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
